@@ -1,4 +1,7 @@
 # Page-object-testing-template
+<a href="https://codeclimate.com/github/bbblucky/page-object-testing-template/maintainability"><img src="https://api.codeclimate.com/v1/badges/a8f68475193fb3521493/maintainability" /></a>
+[![Build Status](https://travis-ci.org/bbblucky/page-object-testing-template.svg?branch=master)](https://travis-ci.org/bbblucky/page-object-testing-template)
+
 End-to-end testing template using Page Object. 
 
 It uses Capybara as the testing framework, SitePrism as the page object Model DSL. It also uses dotenv for environment variables handling and Rake for seeding test data.
