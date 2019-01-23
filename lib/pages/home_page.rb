@@ -10,12 +10,13 @@ module Page
 
     section :header, Header, 'div#gb'
     element :search_box, "input[name*='q']"
-    element :search_button, "input[value*='Google Search']"
-    element :feel_lucky, "input[value*='I'm Feeling Lucky']"
+    element :search_button, "div.FPdoLc input[name*='btnK']"
+    element :feel_lucky, "div.FPdoLc input[value*='I'm Feeling Lucky']"
 
 
     def search(terms)
       self.search_box.set terms
+      self.search_box.send_keys :escape # press esc to close the autocompleter
       self.search_button.click
     end
   end
