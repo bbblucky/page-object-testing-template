@@ -16,6 +16,7 @@ module Page
 
     def search(terms)
       self.search_box.set terms
+      self.search_box.send_key :escape # press esc to close the autocompleter
       self.search_button.click
     end
   end
