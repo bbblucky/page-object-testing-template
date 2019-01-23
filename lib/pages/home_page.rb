@@ -10,8 +10,8 @@ module Page
 
     section :header, Header, 'div#gb'
     element :search_box, "input[name*='q']"
-    element :search_button, "input[name*='btnK']"
-    element :feel_lucky, "input[value*='I'm Feeling Lucky']"
+    element :search_button, "div.FPdoLc input[name*='btnK']"
+    element :feel_lucky, "div.FPdoLc input[value*='I'm Feeling Lucky']"
 
 
     def search(terms)
