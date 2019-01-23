@@ -10,7 +10,7 @@ module Page
 
     section :header, Header, 'div#gb'
     element :search_box, "input[name*='q']"
-    element :search_button, "input[value*='Google Search']"
+    element :search_button, "input[name*='btnK']"
     element :feel_lucky, "input[value*='I'm Feeling Lucky']"
 
 
