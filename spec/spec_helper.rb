@@ -2,6 +2,7 @@ require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'site_prism'
 require 'dotenv'
+require_relative '../lib/download'
 
 
 Dotenv.load(File.expand_path('../../config/.env.example', __FILE__))
