@@ -38,7 +38,7 @@ jobs:
             bundle exec rspec --profile 10 \
                               --format RspecJunitFormatter \
                               --out /tmp/test-results/rspec.xml \
-                              --format progress 
+                              --format progress
 
       # Save artifacts
       - store_test_results:

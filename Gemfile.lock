@@ -39,6 +39,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
+    rspec_junit_formatter (0.4.1)
+      rspec-core (>= 2, < 4, != 2.12.0)
     rubyzip (1.2.2)
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
@@ -57,6 +59,7 @@ DEPENDENCIES
   dotenv
   rake (>= 12.3.1)
   rspec (>= 3.7.0)
+  rspec_junit_formatter
   selenium-webdriver (>= 3.14.0)
   site_prism (>= 3.0)
 
