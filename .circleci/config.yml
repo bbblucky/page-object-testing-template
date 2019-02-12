@@ -2,7 +2,7 @@
 version: 2
 jobs:
   build:
-    parallelism: 1
+    parallelism: 2
     working_directory: ~/page-object-testing-template
     docker:
       # use proper image with browsers support
@@ -34,14 +34,13 @@ jobs:
       # Run rspec in parallel
       - run:
           name: Run rspec in parallel
-          command: bundle exec rspec
-#          bundle exec rspec --profile 10 \
-#                            --format RspecJunitFormatter \
-#                            --out /tmp/test-results/rspec.xml \
-#                            --format progress \
-#                            $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+          command: |
+          bundle exec rspec --profile 10 \
+                            --format RspecJunitFormatter \
+                            --out /tmp/test-results/rspec.xml \
+                            --format progress \
+                            $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
 
       # Save artifacts
       - store_test_results:
-          paths:
-          - /tmp/test-results
+          path: /tmp/test-results
