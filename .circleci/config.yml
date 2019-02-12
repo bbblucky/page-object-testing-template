@@ -20,7 +20,7 @@ jobs:
       # Bundle install dependencies
       - run:
           name: Bundle Install
-          command: bundle check || bundle install
+          command: bundle check || bundle install --path vendor/bundle
 
       # Store bundle cache
       - save_cache:
@@ -38,8 +38,10 @@ jobs:
           bundle exec rspec --profile 10 \
                             --format RspecJunitFormatter \
                             --out /tmp/test-results/rspec.xml \
-                            --format progress
+                            --format progress \
+                            $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
 
       # Save artifacts
       - store_test_results:
-          path: /tmp/test-results
+          paths:
+          - /tmp/test-results
