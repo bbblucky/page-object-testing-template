@@ -39,6 +39,6 @@ end
 Capybara.configure do |config|
   config.run_server = false
   #:selenium for Firefox, :chrome for chrome, and :chrome_headless for chrome headless
-  config.default_driver = :chrome
+  # config.default_driver = :chrome
   config.app_host = ENV["APP_HOST"]
 end
