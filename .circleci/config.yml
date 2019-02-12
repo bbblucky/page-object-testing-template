@@ -1,0 +1,45 @@
+# .circleci/config.yml
+version: 2
+jobs:
+  build:
+    parallelism: 1
+    working_directory: ~/page-object-testing-template
+    docker:
+      # use proper image with browsers support
+      - image: circleci/ruby:2.5.1-node-browsers
+
+    steps:
+      - checkout
+
+      # Restore bundle cache
+      - restore_cache:
+          keys:
+            - page-object-testing-template-{{ checksum "Gemfile.lock" }}
+            - page-object-testing-template-
+
+      # Bundle install dependencies
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+
+      # Store bundle cache
+      - save_cache:
+          key: page-object-testing-template-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      # Prepare .env, useful if you use dotenv gem
+      #- run: cp .env.example .env
+
+      # Run rspec in parallel
+      - run:
+          name: Run rspec in parallel
+          command: |
+          bundle exec rspec --profile 10 \
+                            --format RspecJunitFormatter \
+                            --out /tmp/test-results/rspec.xml \
+                            --format progress
+
+      # Save artifacts
+      - store_test_results:
+          path: /tmp/test-results
