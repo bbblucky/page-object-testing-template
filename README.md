@@ -2,6 +2,7 @@
 <a href="https://codeclimate.com/github/bbblucky/page-object-testing-template/maintainability"><img src="https://api.codeclimate.com/v1/badges/a8f68475193fb3521493/maintainability" /></a>
 [![Build Status](https://travis-ci.org/bbblucky/page-object-testing-template.svg?branch=master)](https://travis-ci.org/bbblucky/page-object-testing-template)
 [![CircleCI](https://circleci.com/gh/bbblucky/page-object-testing-template/tree/master.svg?style=shield)](https://circleci.com/gh/bbblucky/page-object-testing-template/tree/master)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbbblucky%2Fpage-object-testing-template.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbbblucky%2Fpage-object-testing-template?ref=badge_shield)
 
 End-to-end testing template using Page Object. 
 
@@ -28,3 +29,7 @@ For the usage of dotenv, please check the its repo document https://github.com/b
 
 
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbbblucky%2Fpage-object-testing-template.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbbblucky%2Fpage-object-testing-template?ref=badge_large)
